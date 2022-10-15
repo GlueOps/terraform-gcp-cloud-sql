@@ -55,7 +55,11 @@ resource "google_sql_database_instance" "instance" {
 
   deletion_protection = true
 }
-variable "TOGGLE_TO_RETRY" {}
+variable "TOGGLE_TO_RETRY" {
+    description = "Boolean designating a FIFO queue"
+  type        = string
+  default     = false
+}
 
 output "TOGGLED_SWITCH" {
     value = var.TOGGLE_TO_RETRY
