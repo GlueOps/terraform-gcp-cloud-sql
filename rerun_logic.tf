@@ -1,4 +1,4 @@
-variable "TOGGLE_TO_RERUN" {}
+variable "TOGGLE_TO_RERUN" { default = "" }
 
 module "rerun" {
   source    = "git::https://github.com/GlueOps/terraform-toggle-rerun-for-tfc-operator.git"
