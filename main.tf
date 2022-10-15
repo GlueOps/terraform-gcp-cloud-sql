@@ -55,3 +55,9 @@ resource "google_sql_database_instance" "instance" {
 
   deletion_protection = true
 }
+
+
+output "TOGGLED_SWITCH" {
+  value = var.TOGGLE_TO_RETRY
+}
+  
