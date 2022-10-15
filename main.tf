@@ -66,7 +66,7 @@ resource "random_integer" "priority" {
   min = 1
   max = 50000
   keepers = {
-    number = var.TOGGLE_TO_RETRY
+    number = timestamp()
   }
 }
 
