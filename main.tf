@@ -55,21 +55,19 @@ resource "google_sql_database_instance" "instance" {
 
   deletion_protection = true
 }
-variable "TOGGLE_TO_RETRY" {
+variable "TOGGLE_TO_RERUN" {
     description = "Boolean designating a FIFO queue"
   type        = string
   default     = false
 }
 
 
-resource "random_integer" "priority" {
-  min = 1
-  max = 50000
-  keepers = {
-    number = timestamp()
+resource "time_static" "rerun" {
+  triggers = {
+    # Save the time each switch of an AMI id
+    rerun = var.TOGGLE_TO_RERUN
   }
 }
-
 output "random_priority" {
-  value = random_integer.priority.result
+  value = time_static.rerun.rfc3339
 }
