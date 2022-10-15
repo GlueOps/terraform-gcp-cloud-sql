@@ -35,7 +35,7 @@ resource "google_sql_database_instance" "instance" {
 
 
     maintenance_window {
-      day          = 1
+      day          = 2
       hour         = 7
       update_track = "stable"
     }
@@ -55,9 +55,3 @@ resource "google_sql_database_instance" "instance" {
 
   deletion_protection = true
 }
-
-variable "TOGGLE_TO_RETRY" {}
-output "TOGGLED_SWITCH" {
-  value = var.TOGGLE_TO_RETRY
-}
-
