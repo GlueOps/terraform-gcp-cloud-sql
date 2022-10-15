@@ -63,7 +63,7 @@ variable "TOGGLE_TO_RERUN" {
 resource "time_static" "rerun" {
   triggers = {
     # Save the time each switch of an AMI id
-    rerun = var.TOGGLE_TO_RERUN
+    rerun = timestamp()
   }
 }
 output "time_ran" {
