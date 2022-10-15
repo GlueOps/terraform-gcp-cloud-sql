@@ -68,6 +68,6 @@ resource "time_static" "rerun" {
     rerun = var.TOGGLE_TO_RERUN
   }
 }
-output "random_priority" {
+output "time_ran" {
   value = time_static.rerun.rfc3339
 }
