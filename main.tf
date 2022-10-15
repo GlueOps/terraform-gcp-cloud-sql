@@ -1,8 +1,6 @@
-variable "GOOGLE_CREDENTIALS"{}
 
 provider "google" {
   project = local.project_name
-  credentials = var.GOOGLE_CREDENTIALS
 }
 
 
