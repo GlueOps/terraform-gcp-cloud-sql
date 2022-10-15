@@ -73,5 +73,3 @@ resource "random_integer" "priority" {
 output "random_priority" {
   value = random_integer.priority.result
 }
-  
-}
