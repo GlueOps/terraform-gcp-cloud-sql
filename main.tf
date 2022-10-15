@@ -61,6 +61,17 @@ variable "TOGGLE_TO_RETRY" {
   default     = false
 }
 
-output "TOGGLED_SWITCH" {
-    value = "${timestamp()}"
-    }
+
+resource "random_integer" "priority" {
+  min = 1
+  max = 50000
+  keepers = {
+    number = var.TOGGLE_TO_RETRY
+  }
+}
+
+output "random_priority" {
+  value = random_integer.priority.result
+}
+  
+}
