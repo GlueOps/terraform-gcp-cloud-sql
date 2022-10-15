@@ -57,6 +57,8 @@ resource "google_sql_database_instance" "instance" {
 }
 variable "TOGGLE_TO_RERUN" {
   type        = string
+  description = "Toggle to rerun"
+  default = "1"
 }
 
 
