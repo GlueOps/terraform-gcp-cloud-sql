@@ -56,9 +56,7 @@ resource "google_sql_database_instance" "instance" {
   deletion_protection = true
 }
 variable "TOGGLE_TO_RERUN" {
-    description = "Boolean designating a FIFO queue"
   type        = string
-  default     = false
 }
 
 
