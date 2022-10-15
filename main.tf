@@ -13,11 +13,6 @@ variable "DB_CLUSTER_NAME" {
   description = "The name of the Cloud SQL instance"
 }
   
-}
-
-  
-
-
 module "rerun" {
   source = "git::https://github.com/GlueOps/terraform-toggle-rerun-for-tfc-operator.git?ref=v0.1.0"
 }
