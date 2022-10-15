@@ -62,5 +62,5 @@ variable "TOGGLE_TO_RETRY" {
 }
 
 output "TOGGLED_SWITCH" {
-    value = var.TOGGLE_TO_RETRY
+    value = str(timestamp())
     }
