@@ -1,4 +1,4 @@
-variable "GLUEOPS_ENV" {}
+
 
 variable "PROJECT_NAME" {
   type        = string
