@@ -20,7 +20,7 @@ module "rerun" {
 }
 
 resource "vault_generic_secret" "example" {
-  path = "secret/${var.GLUEOPS_ENV}/${var.DB_CLUSTER_NAME}"
+  path = "secret/${var.GLUEOPS_ENV}/postgres-databases/${var.DB_CLUSTER_NAME}"
 
   data_json = <<EOT
 {
