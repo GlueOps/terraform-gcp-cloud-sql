@@ -24,8 +24,9 @@ resource "vault_generic_secret" "example" {
 
   data_json = <<EOT
 {
-  "foo":   "bar",
-  "pizza": "cheese"
+  "username":   "glueops_admin",
+  "password": "${random_password.password.result}",
+  "host": "${google_sql_database_instance.instance.public_ip_address}"
 }
 EOT
 }
