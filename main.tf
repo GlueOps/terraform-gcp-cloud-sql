@@ -80,7 +80,13 @@ resource "google_sql_database_instance" "instance" {
       record_client_address   = false
     }
 
+    ip_configuration {
+      authorized_networks {
+        name  = "all"
+        value = "0.0.0.0/0"
+      }
 
+    }
 
     maintenance_window {
       day          = 2
